@@ -7,37 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Calculadora</h1>
-    <section id="corpo">
-        <section id="display"></section>
-        <div id="l1">
-            <div id="apagar">CE</div>
-            <div id="mult">*</div>
-            <div id="div">/</div>
-            <div id="sub">-</div>
+    <main>
+        <h1>Calculadora</h1>
+        <div id="calculadora">
+            <div id="tela"></div>
+            <div id="AC" onclick="limpar()">AC</div>
+            <div class="botao" id="zero" onclick="numero(this)">0</div>
+            <div class="botao" id="um">1</div>
+            <div class="botao" id="dois">2</div>
+            <div class="botao" id="tres">3</div>
+            <div class="botao" id="quatro">4</div>
+            <div class="botao" id="cinco">5</div>
+            <div class="botao" id="seis">6</div>
+            <div class="botao" id="sete">7</div>
+            <div class="botao" id="oito">8</div>
+            <div class="botao" id="nove">9</div>
+            <div class="botao" id="divisao">/</div>
+            <div class="botao" id="multi">*</div>
+            <div class="botao" id="menos">-</div>
+            <div class="botao" id="mais">+</div>
+            <div class="botao" id="igual">=</div>
+            <div class="botao" id="ponto">.</div>
         </div>
-        <div id="l2">           
-            <div id="sete">7</div>
-            <div id="oito">8</div>
-            <div id="nove">9</div>
-            <div id="soma">+</div>   
-        </div>
-        <div id="l3">
-            <div id="quatro">4</div>
-            <div id="cinco">5</div>
-            <div id="seis">6</div>
-            <div id="virg">.</div>
-        </div>
-        <div id="l4">
-            <div id="um">1</div>
-            <div id="dois">2</div>
-            <div id="tres">3</div>
-            <div id="igual">=</div>
-        </div>
-        <div id="l5">
-            <div id="zero">0</div>
-        </div>     
-    </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

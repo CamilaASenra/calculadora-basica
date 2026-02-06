@@ -1,238 +1,150 @@
-body{
-    background-color: rgb(187, 118, 252);
-    text-align: center;
-}
-h1{
-    color: aliceblue;
-    font-weight: bolder;
-}
-#corpo{
-    background-color: rgb(226, 214, 214);
-    height: 390px;
-    width: 300px;
-    margin: auto;
-    border-radius: 10px;
-}
-#display{
-    background-color: aliceblue;
-    height: 50px;
-    max-height: 50px;
-    width: 250px;
-    max-width: 250px;
-    margin: auto;
-    border-radius: 10px;
-    position: relative;
-    top: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    color: rgba(0, 0, 0, 0.548);
-    font-size: 50px;
-    text-align: right;
-    overflow: hidden;
-    white-space: nowrap;
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#l1{
-  display: flex;
-  justify-content: space-evenly; 
-  align-items: center; 
-  position: relative;
-  top: 60px;
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --cor0: #0A6073; 
+    --cor1: #0B0D0C;
+    --cor2: #D9AD29;
+    --cor3: #BF861B;
+    --cor4: #F2F2F2;
 }
-#apagar{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor4);
+    color: var(--cor1);
+}
+
+
+h1 {
     text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+    margin: 5px;
+    padding: 5px;
 }
-#mult{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
+
+
+div#calculadora {
+    display: grid;
+    grid-template-columns: 8px repeat(4, 1fr);
+    grid-template-rows: 8px 2fr repeat(5, 1fr) 8px;
+    gap: 8px;
+    align-content: center;
+    background-color: var(--cor0);
+    width: 300px;
+    height: 450px;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.384);
+}
+
+div.botao, div#AC {
+    background-color: var(--cor2);
+    border-radius: 15px;
     text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+    font-size: 1.2em;
+    padding-top: 12px;
+    transition: background-color 0.5s;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.384);
+    text-shadow: 2px 2px 5px var(--cor3);
 }
-#div{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+
+div.botao:hover, div#AC:hover {
+    background-color: var(--cor3);
+    cursor: pointer;
 }
-#sub{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+
+div.botao:active, div#AC:active {
+    background-color: var(--cor2);
+    transform: scale(0.98);
 }
-#l2{
-  display: flex;
-  justify-content: space-evenly; 
-  align-items: center; 
-  position: relative;
-  top: 70px;
+
+#tela {
+    grid-area: 2 / 2 / 3 / 8;
+    width: 268px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.384);
+    background-color: var(--cor4);
+    overflow-x: auto;
+    overflow-y: scroll;
+    direction: rtl;
+    padding: 15px;
+    font-size: 2em;
+
 }
-#sete{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+
+#AC {
+    grid-area: 3 / 2 / 4 / 3;
 }
-#oito{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+
+#zero {
+    grid-area: -2 / 2 / -3 / 4;
 }
-#nove{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+
+#um {
+    grid-area: -3 / 2 / -4 / 3;
 }
-#soma{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+
+#dois {
+    grid-area: -3 / 3 / -4 / 4;
 }
-#l3{
-  display: flex;
-  justify-content: space-evenly; 
-  align-items: center; 
-  position: relative;
-  top: 80px;
+
+#tres {
+    grid-area: -3 / 4 / -4 / 5;
 }
-#quatro{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+
+#quatro {
+    grid-area: 5 / 2 / 6 / 3;
 }
-#cinco{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+
+#cinco {
+    grid-area: 5 / 3 / 6 / 4;
 }
-#seis{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+
+#seis {
+    grid-area: 5 / 4 / 6 / 5;
 }
-#virg{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+
+#sete {
+    grid-area: 4 / 2 / 5 / 3;
 }
-#l4{
-  display: flex;
-  justify-content: space-evenly; 
-  align-items: center; 
-  position: relative;
-  top: 90px;
+
+#oito {
+    grid-area: 4 / 3 / 5 / 4;
 }
-#um{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+
+#nove {
+    grid-area: 4 / 4 / 5 / 5;
 }
-#dois{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+
+#divisao {
+    grid-area: 3 / 3 / 4 / 4;
 }
-#tres{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+
+#multi {
+    grid-area: 3 / 4 / 4 / 5;
 }
-#igual{
-    background-color: aliceblue;
-    height: 45px;
-    width: 45px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+
+#menos {
+    grid-area: 3 / 5 / 4 / 6;
 }
-#l5{
-  display: flex; 
-  justify-content: space-around;
-  align-items: center; 
-  position: relative;
-  top: 100px;
+
+#mais {
+    grid-area: 4 / 5 / 6 / 6;
 }
-#zero{
-    background-color: aliceblue;
-    height: 45px;
-    width: 95px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    line-height: 40px;
+
+#igual {
+    grid-area: 6 / 5 / 8 / 6;
+}
+
+#ponto {
+    grid-area: 7 / 4 / 8 / 5
 }
