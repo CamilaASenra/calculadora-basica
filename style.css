@@ -73,12 +73,11 @@ div.botao:active, div#AC:active {
     border-radius: 15px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.384);
     background-color: var(--cor4);
-    overflow-x: auto;
-    overflow-y: scroll;
-    direction: rtl;
+    overflow-x: scroll;
+    /*direction: rtl;*/
+    text-align: end;
     padding: 15px;
     font-size: 2em;
-
 }
 
 #AC {

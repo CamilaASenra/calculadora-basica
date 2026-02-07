@@ -1,18 +1,46 @@
-var n1
-var n2
-var se 
+var n1 = ""
+var n2 = ""
+var sinal = ""
+var texto
+var num
+//const divs = document.querySelectorAll('.botao')
+//const container = document.getElementById('tela')
 
-const divs = document.querySelectorAll('.botao')
-const container = document.getElementById('tela')
-
-function limpar(){
+function limpar() {
     tela.innerHTML = ""
     n1 = ""
     n2 = ""
-    se = ""
+    sinal = ""
 }
 
-divs.forEach(div => {
+//botao.addEventListener("click", numero(this))
+
+function operador(x) {
+    op = x.innerText
+    tela.innerHTML += op
+    sinal = op
+}
+
+function numero(x) {
+    texto = x.innerText
+    tela.innerHTML += texto
+    if (sinal == ""){
+        n1 += texto
+    } else {
+        n2 += texto
+    }
+    alert (n1)
+    alert (n2)
+}
+
+
+
+
+
+
+
+
+/*divs.forEach(div => {
             div.addEventListener('click', function() {
                 // 1. Captura o valor (texto) da div clicada
                 const texto = this.innerText;
@@ -28,7 +56,7 @@ divs.forEach(div => {
                     n2 += texto
                 }
             })
-})
+})*/
 
 
 /*
@@ -44,115 +72,6 @@ function clicar1(){
     } else {
         n2 += "1"
     }
-}
-
-var dois = window.document.getElementById("dois")
-dois.addEventListener("click", clicar2);
-
-function clicar2(){
-    tela.innerHTML += "2"
-    dois.style.color = "white"
-    if (se == ""){
-        n1 += "2"
-    } else {
-        n2 += "2"
-    }    
-}
-
-var tres = window.document.getElementById("tres")
-tres.addEventListener("click", clicar3);
-function clicar3(){
-    tela.innerHTML += "3"
-    tres.style.color = "white"
-    if (se == ""){
-        n1 += "3"
-    } else {
-        n2 += "3"
-    }    
-}
-
-var quatro = window.document.getElementById("quatro")
-quatro.addEventListener("click", clicar4);
-function clicar4(){
-    tela.innerHTML += "4"
-    quatro.style.color = "white"
-    if (se == ""){
-        n1 += "4"
-    } else {
-        n2 += "4"
-    }    
-}
-
-var cinco = window.document.getElementById("cinco")
-cinco.addEventListener("click", clicar5);
-function clicar5(){
-    tela.innerHTML += "5"
-    cinco.style.color = "white"
-    if (se == ""){
-        n1 += "5"
-    } else {
-        n2 += "5"
-    }    
-}
-
-var seis = window.document.getElementById("seis")
-seis.addEventListener("click", clicar6);
-function clicar6(){
-    tela.innerHTML += "6"
-    seis.style.color = "white"
-    if (se == ""){
-        n1 += "6"
-    } else {
-        n2 += "6"
-    }    
-}
-
-var sete = window.document.getElementById("sete")
-sete.addEventListener("click", clicar7);
-function clicar7(){
-    tela.innerHTML += "7"
-    sete.style.color = "white"
-    if (se == ""){
-        n1 += "7"
-    } else {
-        n2 += "7"
-    }    
-}
-
-var oito = window.document.getElementById("oito")
-oito.addEventListener("click", clicar8);
-function clicar8(){
-    tela.innerHTML += "8"
-    oito.style.color = "white"
-    if (se == ""){
-        n1 += "8"
-    } else {
-        n2 += "8"
-    }    
-}
-
-var nove = window.document.getElementById("nove")
-nove.addEventListener("click", clicar9);
-function clicar9(){
-    tela.innerHTML += "9"
-    nove.style.color = "white"
-    if (se == ""){
-        n1 += "9"
-    } else {
-        n2 += "9"
-    }    
-}
-
-var zero = window.document.getElementById("zero")
-zero.addEventListener("click", clicar0);
-function clicar0(){
-    tela.innerHTML += "0"
-    zero.style.color = "white"
-    if (se == ""){
-        n1 += "0"
-    } else {
-        n2 += "0"
-    }    
 }
 
 var virg = window.document.getElementById("virg")
