@@ -74,10 +74,14 @@ div.botao:active, div#AC:active {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.384);
     background-color: var(--cor4);
     overflow-x: scroll;
-    /*direction: rtl;*/
     text-align: end;
     padding: 15px;
     font-size: 2em;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor3) var(--cor0);
 }
 
 #AC {
