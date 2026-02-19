@@ -1,4 +1,4 @@
-# 🧮 Calculadora Simples JS
+# 🧮 Calculadora Básica JS
 
 ![Screenshot da Calculadora](calculadora.jpg) 
 
@@ -20,6 +20,8 @@
 1. Faça o clone do repositório:
    `git clone https://github.com/CamilaASenra/calculadora-basica`
 2. Abra o arquivo `index.html` no seu navegador.
+
+Ou [🔗 Clique aqui para testar] http://camilaasenra.github.io/calculadora-basica/
 
 ## 🤝 Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou fazer um pull request.
